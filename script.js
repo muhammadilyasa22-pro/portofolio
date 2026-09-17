@@ -78,7 +78,6 @@ if (educationSection) {
 const activityImages=['assets/Belajar & Praktik Coding.jpeg','assets/Project Development.jpeg','assets/Kegiatan Gamelab Indonesia.jpeg','assets/Pembelajaran & Workshop.jpeg','assets/Presentasi Project.jpeg'];
 document.querySelectorAll('.activity-photo-card').forEach((card,index)=>{const src=activityImages[index];if(!src){card.style.display='none';return;}const image=card.querySelector('.activity-photo');const links=card.querySelectorAll('.activity-photo-btn');if(image)image.src=src;if(links[0])links[0].href=src;if(links[1])links[1].href=src;});
 
-// Hapus fitur unduh dari Dokumentasi Kegiatan tanpa mengubah tombol Lihat Foto.
 document.querySelectorAll('.activity-photo-btn[download]').forEach((button) => button.remove());
 
 const certificateSection = document.getElementById('certificates');
@@ -87,7 +86,6 @@ if (certificateSection) {
   if (card && !card.querySelector('.certificate-preview')) {
     const description = card.querySelector('p:last-child');
     if (description) description.style.display = 'none';
-
     const preview = document.createElement('a');
     preview.href = 'assets/sertifikat%20kunjungan%20industri.jpeg';
     preview.target = '_blank';
@@ -117,13 +115,17 @@ if (contactSection) {
     </div>`;
 }
 
-// Pastikan Instagram dan Gmail di footer juga menjadi tautan aktif.
+// Buat kontak Instagram dan Gmail tampil berdekatan di footer dan tetap bisa diklik.
 const footer = document.querySelector('footer');
-if (footer) {
-  const footerText = footer.innerHTML;
-  footer.innerHTML = footerText
-    .replace(/@ily1ae/g, '<a class="footer-contact-link" href="https://www.instagram.com/ily1ae/" target="_blank" rel="noopener noreferrer">@ily1ae</a>')
-    .replace(/muhammadilyasar2209@gmail\.com/g, '<a class="footer-contact-link" href="mailto:muhammadilyasar2209@gmail.com">muhammadilyasar2209@gmail.com</a>');
+if (footer && !footer.querySelector('.footer-contact-wrap')) {
+  const footerContact = document.createElement('div');
+  footerContact.className = 'footer-contact-wrap';
+  footerContact.innerHTML = `
+    <span class="footer-contact-label">Instagram:</span>
+    <a class="footer-contact-link" href="https://www.instagram.com/ily1ae/" target="_blank" rel="noopener noreferrer">@ily1ae</a>
+    <span class="footer-contact-label">Gmail:</span>
+    <a class="footer-contact-link" href="mailto:muhammadilyasar2209@gmail.com">muhammadilyasar2209@gmail.com</a>`;
+  footer.appendChild(footerContact);
 }
 
 const sections=document.querySelectorAll('section[id]');const links=document.querySelectorAll('nav a');
