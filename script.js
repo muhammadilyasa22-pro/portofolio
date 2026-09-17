@@ -15,7 +15,6 @@ if (menu && nav) {
   });
 }
 
-/* CSS biodata tambahan */
 if (!document.querySelector('link[href="biodata.css"]')) {
   const biodataStyle = document.createElement('link');
   biodataStyle.rel = 'stylesheet';
@@ -23,7 +22,6 @@ if (!document.querySelector('link[href="biodata.css"]')) {
   document.head.appendChild(biodataStyle);
 }
 
-/* Tema visual referensi dimuat paling akhir agar mengutamakan desain baru. */
 if (!document.querySelector('link[href="reference.css"]')) {
   const referenceStyle = document.createElement('link');
   referenceStyle.rel = 'stylesheet';
@@ -31,7 +29,13 @@ if (!document.querySelector('link[href="reference.css"]')) {
   document.head.appendChild(referenceStyle);
 }
 
-/* Biodata pribadi tetap menggunakan data Ilyasa */
+if (!document.querySelector('link[href="desktop.css"]')) {
+  const desktopStyle = document.createElement('link');
+  desktopStyle.rel = 'stylesheet';
+  desktopStyle.href = 'desktop.css';
+  document.head.appendChild(desktopStyle);
+}
+
 const profileSection = document.getElementById('profile');
 
 if (profileSection) {
@@ -70,7 +74,6 @@ if (profileSection) {
   `;
 }
 
-/* Foto kegiatan tetap memakai daftar foto milik portfolio */
 const activityImages = [
   'assets/WhatsApp Image 2026-09-17 at 08.21.23 (1).jpeg',
   'assets/WhatsApp Image 2026-09-17 at 08.21.23 (2).jpeg',
@@ -85,12 +88,10 @@ activityCards.forEach((card, index) => {
   const image = card.querySelector('.activity-photo');
   const links = card.querySelectorAll('.activity-photo-btn');
   const src = activityImages[index];
-
   if (!src) return;
-
   if (image) image.src = src;
   if (links[0]) links[0].href = src;
-  if (links[1]) links[1].href = src;
+  if (links[1]) links[1.href = src;
 });
 
 const sections = document.querySelectorAll('section[id]');
@@ -99,11 +100,9 @@ const links = document.querySelectorAll('nav a');
 function setActiveNav() {
   let current = 'home';
   const position = window.scrollY + 180;
-
   sections.forEach((section) => {
     if (position >= section.offsetTop) current = section.id;
   });
-
   links.forEach((link) => {
     link.classList.toggle('active', link.getAttribute('href') === `#${current}`);
   });
