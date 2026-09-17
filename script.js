@@ -74,13 +74,14 @@ if (profileSection) {
   `;
 }
 
+/* Foto kegiatan yang sekarang ada di folder assets */
 const activityImages = [
-  'assets/WhatsApp Image 2026-09-17 at 08.21.23 (1).jpeg',
-  'assets/WhatsApp Image 2026-09-17 at 08.21.23 (2).jpeg',
-  'assets/WhatsApp Image 2026-09-17 at 08.21.23 (3).jpeg',
-  'assets/WhatsApp Image 2026-09-17 at 08.21.23.jpeg',
-  'assets/WhatsApp Image 2026-09-17 at 08.21.24 (1).jpeg',
-  'assets/WhatsApp Image 2026-09-17 at 08.21.24 (2).jpeg'
+  'assets/Belajar & Praktik Coding.jpeg',
+  'assets/Project Development.jpeg',
+  'assets/Kegiatan Gamelab Indonesia.jpeg',
+  'assets/Pembelajaran & Workshop.jpeg',
+  'assets/Presentasi Project.jpeg',
+  'assets/Kegiatan Presentasi.jpeg'
 ];
 
 const activityCards = document.querySelectorAll('.activity-photo-card');
