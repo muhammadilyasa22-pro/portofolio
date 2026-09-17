@@ -23,7 +23,15 @@ if (!document.querySelector('link[href="biodata.css"]')) {
   document.head.appendChild(biodataStyle);
 }
 
-/* Biodata pribadi */
+/* Tema visual referensi dimuat paling akhir agar mengutamakan desain baru. */
+if (!document.querySelector('link[href="reference.css"]')) {
+  const referenceStyle = document.createElement('link');
+  referenceStyle.rel = 'stylesheet';
+  referenceStyle.href = 'reference.css';
+  document.head.appendChild(referenceStyle);
+}
+
+/* Biodata pribadi tetap menggunakan data Ilyasa */
 const profileSection = document.getElementById('profile');
 
 if (profileSection) {
@@ -62,7 +70,7 @@ if (profileSection) {
   `;
 }
 
-/* Perbaiki foto kegiatan agar memakai file yang benar-benar ada di repository */
+/* Foto kegiatan tetap memakai daftar foto milik portfolio */
 const activityImages = [
   'assets/WhatsApp Image 2026-09-17 at 08.21.23 (1).jpeg',
   'assets/WhatsApp Image 2026-09-17 at 08.21.23 (2).jpeg',
@@ -104,7 +112,6 @@ function setActiveNav() {
 window.addEventListener('scroll', setActiveNav, { passive: true });
 setActiveNav();
 
-/* Animasi masuk untuk semua elemen, termasuk biodata yang dibuat oleh JavaScript */
 const revealItems = document.querySelectorAll('.reveal');
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
