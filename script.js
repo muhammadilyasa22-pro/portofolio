@@ -15,39 +15,58 @@ if (menu && nav) {
   });
 }
 
-if (!document.querySelector('link[href="biodata.css"]')) {
-  const biodataStyle = document.createElement('link');
-  biodataStyle.rel = 'stylesheet';
-  biodataStyle.href = 'biodata.css';
-  document.head.appendChild(biodataStyle);
-}
+const styles = [
+  ['biodata.css', 'biodataStyle'],
+  ['reference.css', 'referenceStyle'],
+  ['desktop.css', 'desktopStyle'],
+  ['education-modern.css', 'educationStyle'],
+  ['about.css', 'aboutStyle']
+];
 
-if (!document.querySelector('link[href="reference.css"]')) {
-  const referenceStyle = document.createElement('link');
-  referenceStyle.rel = 'stylesheet';
-  referenceStyle.href = 'reference.css';
-  document.head.appendChild(referenceStyle);
-}
-
-if (!document.querySelector('link[href="desktop.css"]')) {
-  const desktopStyle = document.createElement('link');
-  desktopStyle.rel = 'stylesheet';
-  desktopStyle.href = 'desktop.css';
-  document.head.appendChild(desktopStyle);
-}
-
-if (!document.querySelector('link[href="education-modern.css"]')) {
-  const educationStyle = document.createElement('link');
-  educationStyle.rel = 'stylesheet';
-  educationStyle.href = 'education-modern.css';
-  document.head.appendChild(educationStyle);
-}
+styles.forEach(([href]) => {
+  if (!document.querySelector(`link[href="${href}"]`)) {
+    const style = document.createElement('link');
+    style.rel = 'stylesheet';
+    style.href = href;
+    document.head.appendChild(style);
+  }
+});
 
 const profileSection = document.getElementById('profile');
 
 if (profileSection) {
   profileSection.classList.add('biodata-section');
   profileSection.innerHTML = `
+    <div class="about-me-section">
+      <div class="about-me-wrap">
+        <div class="about-me-card reveal">
+          <p class="about-me-kicker">TENTANG SAYA</p>
+          <h2>Halo, saya <span>Muhammad Ilyasa Ramadhan.</span></h2>
+          <p class="about-me-text">
+            Saya adalah seorang pelajar yang memiliki ketertarikan besar pada dunia teknologi, khususnya dalam bidang Rekayasa Perangkat Lunak (RPL). Saya senang mempelajari bagaimana sebuah ide dapat diubah menjadi website atau aplikasi yang bermanfaat, mulai dari merancang tampilan, menulis kode, mengelola database, hingga mengembangkan sebuah project secara bertahap.
+            <br><br>
+            Bagi saya, belajar pemrograman bukan hanya tentang membuat kode berjalan, tetapi juga tentang melatih cara berpikir, memecahkan masalah, mencoba hal baru, dan terus memperbaiki hasil yang sudah dibuat. Saya terbiasa belajar melalui praktik dan project sehingga dapat memahami teknologi dengan lebih nyata.
+            <br><br>
+            Saat ini saya terus mengembangkan kemampuan di bidang web development, memperdalam HTML, CSS, JavaScript, Bootstrap, React, backend, serta database. Saya juga terbuka untuk mempelajari teknologi baru dan ingin terus menghasilkan karya yang rapi, modern, bermanfaat, dan dapat menjadi bagian dari perjalanan saya menuju dunia profesional.
+          </p>
+          <div class="about-me-highlight">
+            <div class="about-me-point">
+              <strong>Fokus</strong>
+              <span>Web development dan pengembangan aplikasi.</span>
+            </div>
+            <div class="about-me-point">
+              <strong>Karakter belajar</strong>
+              <span>Suka praktik, mencoba, memperbaiki, dan belajar dari project.</span>
+            </div>
+            <div class="about-me-point">
+              <strong>Tujuan</strong>
+              <span>Terus berkembang dan menghasilkan karya digital yang bermanfaat.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="biodata-wrap">
       <div class="biodata-title reveal">
         <p class="eyebrow">01 — DATA PRIBADI</p>
