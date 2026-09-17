@@ -91,7 +91,7 @@ activityCards.forEach((card, index) => {
   if (!src) return;
   if (image) image.src = src;
   if (links[0]) links[0].href = src;
-  if (links[1]) links[1.href = src;
+  if (links[1]) links[1].href = src;
 });
 
 const sections = document.querySelectorAll('section[id]');
