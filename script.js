@@ -74,6 +74,56 @@ if (profileSection) {
   `;
 }
 
+/* Perjalanan pendidikan: TK, MI, MTs, dan SMK */
+const educationSection = document.getElementById('education');
+
+if (educationSection) {
+  educationSection.innerHTML = `
+    <div class="section-head reveal">
+      <span class="section-no">02</span>
+      <div>
+        <p class="eyebrow">PENDIDIKAN</p>
+        <h2>Perjalanan <span>pendidikan.</span></h2>
+      </div>
+    </div>
+    <div class="education-journey">
+      <article class="education-step reveal">
+        <div class="education-step-year">TK</div>
+        <div class="education-step-content">
+          <p class="mini-label">PENDIDIKAN DASAR</p>
+          <h3>Bustanul Athfal Aisyiyah Wonoasri</h3>
+          <p>Pendidikan taman kanak-kanak.</p>
+        </div>
+      </article>
+      <article class="education-step reveal">
+        <div class="education-step-year">MI</div>
+        <div class="education-step-content">
+          <p class="mini-label">MADRASAH IBTIDAIYAH</p>
+          <h3>MI Muhammadiyah 5 Wonoasri</h3>
+          <p>Pendidikan dasar madrasah ibtidaiyah.</p>
+        </div>
+      </article>
+      <article class="education-step reveal">
+        <div class="education-step-year">MTs</div>
+        <div class="education-step-content">
+          <p class="mini-label">MADRASAH TSANAWIYAH</p>
+          <h3>MTs Muhammadiyah 2 Jenangan</h3>
+          <p>Pendidikan menengah pertama.</p>
+        </div>
+      </article>
+      <article class="education-step reveal">
+        <div class="education-step-year">SMK</div>
+        <div class="education-step-content">
+          <p class="mini-label">SEKOLAH MENENGAH KEJURUAN</p>
+          <h3>SMK Negeri 1 Jenangan</h3>
+          <p class="role">Rekayasa Perangkat Lunak (RPL)</p>
+          <p>Mempelajari pemrograman, pengembangan website, basis data, desain antarmuka, serta pembuatan project aplikasi.</p>
+        </div>
+      </article>
+    </div>
+  `;
+}
+
 /* Foto kegiatan sesuai file yang sekarang tersedia di assets */
 const activityImages = [
   'assets/Belajar & Praktik Coding.jpeg',
