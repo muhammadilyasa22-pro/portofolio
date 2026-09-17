@@ -16,11 +16,12 @@ if (menu && nav) {
 }
 
 const styles = [
-  ['biodata.css', 'biodataStyle'],
-  ['reference.css', 'referenceStyle'],
-  ['desktop.css', 'desktopStyle'],
-  ['education-modern.css', 'educationStyle'],
-  ['about.css', 'aboutStyle']
+  ['biodata.css'],
+  ['reference.css'],
+  ['desktop.css'],
+  ['education-modern.css'],
+  ['about.css'],
+  ['vision.css']
 ];
 
 styles.forEach(([href]) => {
@@ -50,19 +51,42 @@ if (profileSection) {
             Saat ini saya terus mengembangkan kemampuan di bidang web development, memperdalam HTML, CSS, JavaScript, Bootstrap, React, backend, serta database. Saya juga terbuka untuk mempelajari teknologi baru dan ingin terus menghasilkan karya yang rapi, modern, bermanfaat, dan dapat menjadi bagian dari perjalanan saya menuju dunia profesional.
           </p>
           <div class="about-me-highlight">
-            <div class="about-me-point">
-              <strong>Fokus</strong>
-              <span>Web development dan pengembangan aplikasi.</span>
-            </div>
-            <div class="about-me-point">
-              <strong>Karakter belajar</strong>
-              <span>Suka praktik, mencoba, memperbaiki, dan belajar dari project.</span>
-            </div>
-            <div class="about-me-point">
-              <strong>Tujuan</strong>
-              <span>Terus berkembang dan menghasilkan karya digital yang bermanfaat.</span>
-            </div>
+            <div class="about-me-point"><strong>Fokus</strong><span>Web development dan pengembangan aplikasi.</span></div>
+            <div class="about-me-point"><strong>Karakter belajar</strong><span>Suka praktik, mencoba, memperbaiki, dan belajar dari project.</span></div>
+            <div class="about-me-point"><strong>Tujuan</strong><span>Terus berkembang dan menghasilkan karya digital yang bermanfaat.</span></div>
           </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="vision-section">
+      <div class="vision-wrap">
+        <div class="vision-card reveal">
+          <p class="vision-kicker">VISI KARIR</p>
+          <h2>Membangun masa depan dengan <span>keselamatan sebagai prioritas.</span></h2>
+          <p class="vision-quote">
+            “Menjadi Supervisor K3 Umum Pertambangan yang profesional, berdedikasi, dan terpercaya dalam mewujudkan lingkungan kerja operasional tambang yang aman, sehat, serta bebas dari kecelakaan kerja (<em>zero accident</em>).”
+          </p>
+          <div class="vision-divider"></div>
+          <h3>Langkah Strategis Pencapaian Target</h3>
+          <div class="strategy-list">
+            <article class="strategy-item">
+              <div class="strategy-number">01</div>
+              <strong>Pendidikan &amp; Sertifikasi</strong>
+              <p>Mengikuti pelatihan dan sertifikasi Ahli K3 Umum Kemenaker/BNSP serta sertifikasi K3 Khusus Pertambangan seperti POP (Pengawas Operasional Pertama).</p>
+            </article>
+            <article class="strategy-item">
+              <div class="strategy-number">02</div>
+              <strong>Pengalaman Lapangan</strong>
+              <p>Memulai karir dari jenjang <em>entry-level</em> seperti HSE Officer atau Safety Inspector di sektor pertambangan untuk memahami dinamika dan kebutuhan keselamatan di lapangan.</p>
+            </article>
+            <article class="strategy-item">
+              <div class="strategy-number">03</div>
+              <strong>Pengembangan Leadership</strong>
+              <p>Mengasah keterampilan kepemimpinan, komunikasi, dan manajemen risiko sebagai bekal untuk menjalankan tanggung jawab Supervisor K3.</p>
+            </article>
+          </div>
+          <p class="vision-note">Target karir • Keselamatan kerja • Kepemimpinan • Pengembangan profesional</p>
         </div>
       </div>
     </div>
@@ -75,10 +99,7 @@ if (profileSection) {
       <div class="biodata-card reveal">
         <div class="biodata-photo">
           <img src="assets/profile.jpg" alt="Foto profil Muhammad Ilyasa Ramadhan">
-          <div class="biodata-photo-label">
-            <small>PROFILE / 2026</small>
-            <strong>MUHAMMAD ILYASA RAMADHAN</strong>
-          </div>
+          <div class="biodata-photo-label"><small>PROFILE / 2026</small><strong>MUHAMMAD ILYASA RAMADHAN</strong></div>
         </div>
         <div class="biodata-content">
           <h3>Identitas Pribadi</h3>
@@ -101,50 +122,14 @@ if (profileSection) {
 }
 
 const educationSection = document.getElementById('education');
-
 if (educationSection) {
   educationSection.innerHTML = `
-    <div class="section-head reveal">
-      <span class="section-no">02</span>
-      <div>
-        <p class="eyebrow">PENDIDIKAN</p>
-        <h2>Perjalanan <span>pendidikan.</span></h2>
-      </div>
-    </div>
+    <div class="section-head reveal"><span class="section-no">02</span><div><p class="eyebrow">PENDIDIKAN</p><h2>Perjalanan <span>pendidikan.</span></h2></div></div>
     <div class="education-journey">
-      <article class="education-step reveal">
-        <div class="education-step-year">TK</div>
-        <div class="education-step-content">
-          <p class="mini-label">PENDIDIKAN DASAR</p>
-          <h3>Bustanul Athfal Aisyiyah Wonoasri</h3>
-          <p>Pendidikan taman kanak-kanak.</p>
-        </div>
-      </article>
-      <article class="education-step reveal">
-        <div class="education-step-year">MI</div>
-        <div class="education-step-content">
-          <p class="mini-label">MADRASAH IBTIDAIYAH</p>
-          <h3>MI Muhammadiyah 5 Wonoasri</h3>
-          <p>Pendidikan dasar madrasah ibtidaiyah.</p>
-        </div>
-      </article>
-      <article class="education-step reveal">
-        <div class="education-step-year">MTs</div>
-        <div class="education-step-content">
-          <p class="mini-label">MADRASAH TSANAWIYAH</p>
-          <h3>MTs Muhammadiyah 2 Jenangan</h3>
-          <p>Pendidikan menengah pertama.</p>
-        </div>
-      </article>
-      <article class="education-step reveal">
-        <div class="education-step-year">SMK</div>
-        <div class="education-step-content">
-          <p class="mini-label">SEKOLAH MENENGAH KEJURUAN</p>
-          <h3>SMK Negeri 1 Jenangan</h3>
-          <p class="role">Rekayasa Perangkat Lunak (RPL)</p>
-          <p>Mempelajari pemrograman, pengembangan website, basis data, desain antarmuka, serta pembuatan project aplikasi.</p>
-        </div>
-      </article>
+      <article class="education-step reveal"><div class="education-step-year">TK</div><div class="education-step-content"><p class="mini-label">PENDIDIKAN DASAR</p><h3>Bustanul Athfal Aisyiyah Wonoasri</h3><p>Pendidikan taman kanak-kanak.</p></div></article>
+      <article class="education-step reveal"><div class="education-step-year">MI</div><div class="education-step-content"><p class="mini-label">MADRASAH IBTIDAIYAH</p><h3>MI Muhammadiyah 5 Wonoasri</h3><p>Pendidikan dasar madrasah ibtidaiyah.</p></div></article>
+      <article class="education-step reveal"><div class="education-step-year">MTs</div><div class="education-step-content"><p class="mini-label">MADRASAH TSANAWIYAH</p><h3>MTs Muhammadiyah 2 Jenangan</h3><p>Pendidikan menengah pertama.</p></div></article>
+      <article class="education-step reveal"><div class="education-step-year">SMK</div><div class="education-step-content"><p class="mini-label">SEKOLAH MENENGAH KEJURUAN</p><h3>SMK Negeri 1 Jenangan</h3><p class="role">Rekayasa Perangkat Lunak (RPL)</p><p>Mempelajari pemrograman, pengembangan website, basis data, desain antarmuka, serta pembuatan project aplikasi.</p></div></article>
     </div>
   `;
 }
@@ -160,10 +145,7 @@ const activityImages = [
 const activityCards = document.querySelectorAll('.activity-photo-card');
 activityCards.forEach((card, index) => {
   const src = activityImages[index];
-  if (!src) {
-    card.style.display = 'none';
-    return;
-  }
+  if (!src) { card.style.display = 'none'; return; }
   const image = card.querySelector('.activity-photo');
   const links = card.querySelectorAll('.activity-photo-btn');
   if (image) image.src = src;
@@ -173,29 +155,19 @@ activityCards.forEach((card, index) => {
 
 const sections = document.querySelectorAll('section[id]');
 const links = document.querySelectorAll('nav a');
-
 function setActiveNav() {
   let current = 'home';
   const position = window.scrollY + 180;
-  sections.forEach((section) => {
-    if (position >= section.offsetTop) current = section.id;
-  });
-  links.forEach((link) => {
-    link.classList.toggle('active', link.getAttribute('href') === `#${current}`);
-  });
+  sections.forEach((section) => { if (position >= section.offsetTop) current = section.id; });
+  links.forEach((link) => link.classList.toggle('active', link.getAttribute('href') === `#${current}`));
 }
-
 window.addEventListener('scroll', setActiveNav, { passive: true });
 setActiveNav();
 
 const revealItems = document.querySelectorAll('.reveal');
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-      observer.unobserve(entry.target);
-    }
+    if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
   });
 }, { threshold: 0.12 });
-
 revealItems.forEach((item) => observer.observe(item));
