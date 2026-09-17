@@ -3,198 +3,195 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Fotofolio Muhammad Ilyasa Ramadhan - profil, pendidikan, pengalaman, keahlian, project, kegiatan, dan kontak.">
-  <title>Fotofolio | Muhammad Ilyasa Ramadhan</title>
+  <meta name="description" content="Fotofolio pribadi Ilyasa — profil, pendidikan, pengalaman, keahlian, project, sertifikat, kegiatan, artikel, dan kontak.">
+  <title>Fotofolio | Ilyasa</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header class="navbar">
-  <a class="logo" href="#home">FOTO<span>FOLIO</span></a>
-  <button class="menu" id="menu" aria-label="Buka menu">MENU</button>
-  <nav id="nav">
-    <a class="active" href="#home">Home</a>
-    <a href="#profile">Profil</a>
-    <a href="#education">Pendidikan</a>
-    <a href="#experience">Pengalaman</a>
-    <a href="#skills">Keahlian</a>
-    <a href="#projects">Project</a>
-    <a href="#certificates">Sertifikat</a>
-    <a href="#activities">Kegiatan</a>
-    <a href="#articles">Artikel</a>
-    <a href="#contact">Kontak</a>
-  </nav>
-</header>
+  <header class="navbar">
+    <a class="logo" href="#home">FOTO<span>FOLIO</span></a>
+    <button class="menu" id="menu" aria-label="Buka menu" aria-expanded="false">MENU</button>
+    <nav id="nav" aria-label="Navigasi utama">
+      <a class="active" href="#home">Home</a>
+      <a href="#profile">Profil</a>
+      <a href="#education">Pendidikan</a>
+      <a href="#experience">Pengalaman</a>
+      <a href="#skills">Keahlian</a>
+      <a href="#projects">Project</a>
+      <a href="#certificates">Sertifikat</a>
+      <a href="#activities">Kegiatan</a>
+      <a href="#articles">Artikel</a>
+      <a href="#contact">Kontak</a>
+    </nav>
+  </header>
 
-<main>
-  <section class="hero" id="home">
-    <div class="hero-copy">
-      <div class="status"><span></span> PERSONAL PORTFOLIO / 2026</div>
-      <p class="eyebrow">MUHAMMAD ILYASA RAMADHAN</p>
-      <h1>Halo, saya<br><strong>Ilyasa.</strong></h1>
-      <p class="lead">Saya seorang pelajar dan calon developer yang tertarik pada pengembangan website, desain antarmuka, dan teknologi digital. Saya senang belajar melalui praktik dan membangun project yang terus berkembang.</p>
-      <div class="actions">
-        <a class="btn primary" href="#projects">Lihat Project</a>
-        <a class="btn" href="#contact">Hubungi Saya</a>
-        <a class="btn" href="assets/cv.jpg" download="CV-Muhammad-Ilyasa-Ramadhan.jpg">Unduh CV</a>
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-copy reveal">
+        <p class="eyebrow">PERSONAL PORTFOLIO / 2026</p>
+        <p class="kicker">MUHAMMAD ILYASA RAMADHAN</p>
+        <h1>Halo, saya<br><span>Ilyasa.</span></h1>
+        <p class="lead">Saya seorang pelajar Rekayasa Perangkat Lunak yang tertarik pada pengembangan website, desain antarmuka, dan teknologi digital. Saya senang belajar melalui praktik dan membangun project yang terus berkembang.</p>
+        <div class="actions">
+          <a class="btn primary" href="#projects">Lihat Project</a>
+          <a class="btn" href="#contact">Hubungi Saya</a>
+          <a class="btn" href="assets/cv.jpg" download="CV-Ilyasa.jpg">Unduh CV</a>
+        </div>
+        <div class="stats">
+          <div><strong>RPL</strong><small>Bidang</small></div>
+          <div><strong>WEB</strong><small>Fokus</small></div>
+          <div><strong>2026</strong><small>Fotofolio</small></div>
+        </div>
       </div>
-      <div class="stats">
-        <div><b>8+</b><small>Keahlian</small></div>
-        <div><b>3+</b><small>Project</small></div>
-        <div><b>2026</b><small>Fotofolio</small></div>
+
+      <div class="hero-visual reveal">
+        <div class="photo-card">
+          <div class="photo-top"><span>PROFILE</span><span>01 / 01</span></div>
+          <img src="assets/profile.jpg" alt="Foto profil Ilyasa">
+          <div class="photo-caption"><strong>ILYASA</strong><span>RPL · WEB DEVELOPMENT</span></div>
+        </div>
+        <div class="visual-note note-one">CREATIVE<br>DEVELOPER</div>
+        <div class="visual-note note-two">LEARN<br>BUILD<br>GROW</div>
       </div>
-    </div>
-    <div class="hero-photo">
-      <div class="photo-card">
-        <span class="tag">PROFILE / ILYASA</span>
-        <img src="assets/profile.jpg" alt="Foto profil Muhammad Ilyasa Ramadhan">
+    </section>
+
+    <section class="section dark" id="profile">
+      <div class="section-head reveal">
+        <span class="section-no">01</span>
+        <div><p class="eyebrow">PROFIL PROFESIONAL</p><h2>Mengenal <span>saya.</span></h2></div>
       </div>
-      <div class="circle circle-one"></div>
-      <div class="circle circle-two"></div>
-    </div>
-  </section>
-
-  <section class="dark-section" id="profile">
-    <div class="section-heading">
-      <p class="eyebrow">01 — PROFIL PROFESIONAL</p>
-      <h2>Mengenal <span>saya.</span></h2>
-      <p>Profil singkat mengenai minat, karakter belajar, dan bidang yang sedang saya kembangkan.</p>
-    </div>
-    <div class="profile-grid">
-      <article class="feature-panel">
-        <span class="number">01</span>
-        <h3>Pelajar RPL & Web Developer Pemula</h3>
-        <p>Saya memiliki ketertarikan pada dunia teknologi, terutama pengembangan website. Saya terus belajar melalui tugas sekolah, project pribadi, dan praktik langsung agar kemampuan teknis maupun kreativitas semakin berkembang.</p>
-      </article>
-      <div class="profile-facts">
-        <div><small>Bidang</small><strong>Rekayasa Perangkat Lunak</strong></div>
-        <div><small>Fokus</small><strong>Web Development</strong></div>
-        <div><small>Minat</small><strong>UI, Coding & Teknologi</strong></div>
-        <div><small>Prinsip</small><strong>Belajar, Praktik, Berkembang</strong></div>
+      <div class="profile-grid">
+        <article class="feature-card reveal">
+          <p class="mini-label">ABOUT ME</p>
+          <h3>Pelajar RPL dengan minat pada web development.</h3>
+          <p>Saya sedang mengembangkan kemampuan dalam membuat website dan aplikasi. Proses belajar saya dilakukan melalui tugas sekolah, praktik, project pribadi, dan eksplorasi teknologi.</p>
+        </article>
+        <div class="facts reveal">
+          <div><span>Bidang</span><strong>Rekayasa Perangkat Lunak</strong></div>
+          <div><span>Fokus</span><strong>Web Development</strong></div>
+          <div><span>Minat</span><strong>UI · Coding · Teknologi</strong></div>
+          <div><span>Prinsip</span><strong>Belajar · Praktik · Berkembang</strong></div>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="light-section" id="education">
-    <div class="section-heading">
-      <p class="eyebrow">02 — PENDIDIKAN</p>
-      <h2>Perjalanan <span>pendidikan.</span></h2>
-      <p>Riwayat pendidikan yang menjadi dasar dalam pengembangan kemampuan teknologi dan pemrograman.</p>
-    </div>
-    <div class="timeline-card">
-      <div class="timeline-dot"></div>
-      <div class="timeline-year">SEKOLAH MENENGAH KEJURUAN</div>
-      <h3>SMK Negeri 1 Jenangan</h3>
-      <p class="timeline-role">Rekayasa Perangkat Lunak (RPL)</p>
-      <p>Mempelajari dasar pemrograman, pengembangan website, basis data, desain antarmuka, serta pembuatan project aplikasi sebagai bagian dari pembelajaran kejuruan.</p>
-    </div>
-  </section>
+    <section class="section light" id="education">
+      <div class="section-head reveal">
+        <span class="section-no">02</span>
+        <div><p class="eyebrow">PENDIDIKAN</p><h2>Perjalanan <span>pendidikan.</span></h2></div>
+      </div>
+      <div class="education-card reveal">
+        <div class="year">SMK</div>
+        <div>
+          <p class="mini-label">RIWAYAT PENDIDIKAN</p>
+          <h3>SMK Negeri 1 Jenangan</h3>
+          <p class="role">Rekayasa Perangkat Lunak (RPL)</p>
+          <p>Mempelajari pemrograman, pengembangan website, basis data, desain antarmuka, serta pembuatan project aplikasi.</p>
+        </div>
+      </div>
+    </section>
 
-  <section class="dark-section" id="experience">
-    <div class="section-heading">
-      <p class="eyebrow">03 — PENGALAMAN</p>
-      <h2>Belajar lewat <span>pengalaman.</span></h2>
-      <p>Pengalaman belajar dan project menjadi tempat untuk menerapkan materi yang sudah dipelajari.</p>
-    </div>
-    <div class="experience-grid">
-      <article class="experience-card"><span class="number">01</span><div><small>PROJECT</small><h3>Pengembangan Website</h3><p>Membangun website menggunakan HTML, CSS, JavaScript, React, Vite, dan teknologi pendukung lainnya.</p></div></article>
-      <article class="experience-card"><span class="number">02</span><div><small>PRAKTIK</small><h3>Praktik Kerja Lapangan</h3><p>Menerapkan pembelajaran web development melalui kegiatan praktik, tugas, dokumentasi, dan pengerjaan project.</p></div></article>
-      <article class="experience-card"><span class="number">03</span><div><small>PEMBELAJARAN</small><h3>Eksplorasi Teknologi</h3><p>Mencoba berbagai tools, framework, database, dan workflow agar memahami proses pengembangan aplikasi secara lebih menyeluruh.</p></div></article>
-    </div>
-  </section>
+    <section class="section dark" id="experience">
+      <div class="section-head reveal">
+        <span class="section-no">03</span>
+        <div><p class="eyebrow">PENGALAMAN</p><h2>Belajar lewat <span>pengalaman.</span></h2></div>
+      </div>
+      <div class="experience-list">
+        <article class="experience-item reveal"><span>01</span><div><p class="mini-label">PRAKTIK KERJA LAPANGAN</p><h3>Praktik Web Development</h3><p>Menerapkan pembelajaran pengembangan web melalui kegiatan praktik, pengerjaan project, dokumentasi, dan penyelesaian tugas.</p></div></article>
+        <article class="experience-item reveal"><span>02</span><div><p class="mini-label">PROJECT</p><h3>Membangun Website</h3><p>Membuat dan mengembangkan website menggunakan HTML, CSS, JavaScript, React, Vite, serta teknologi backend dan database.</p></div></article>
+        <article class="experience-item reveal"><span>03</span><div><p class="mini-label">PEMBELAJARAN</p><h3>Eksplorasi Teknologi</h3><p>Mencoba tools, framework, database, dan workflow pengembangan aplikasi untuk memperluas kemampuan teknis.</p></div></article>
+      </div>
+    </section>
 
-  <section class="skills" id="skills">
-    <div class="section-heading">
-      <p class="eyebrow">04 — KEAHLIAN</p>
-      <h2>Keahlian yang <span>saya kembangkan.</span></h2>
-      <p>Teknologi dan kemampuan yang saya gunakan dalam proses belajar dan membuat project.</p>
-    </div>
-    <div class="skill-grid">
-      <article class="skill-card"><div class="skill-top"><span>01</span><i>HTML</i></div><h3>HTML</h3><p>Struktur halaman web yang rapi dan semantik.</p><div class="skill-line"><span style="width:90%"></span></div><small>90%</small></article>
-      <article class="skill-card"><div class="skill-top"><span>02</span><i>CSS</i></div><h3>CSS</h3><p>Layout, responsive design, dan tampilan antarmuka.</p><div class="skill-line"><span style="width:85%"></span></div><small>85%</small></article>
-      <article class="skill-card"><div class="skill-top"><span>03</span><i>JS</i></div><h3>JavaScript</h3><p>Interaksi, logika, dan fitur website dinamis.</p><div class="skill-line"><span style="width:80%"></span></div><small>80%</small></article>
-      <article class="skill-card"><div class="skill-top"><span>04</span><i>BS</i></div><h3>Bootstrap</h3><p>Komponen dan layout website yang responsif.</p><div class="skill-line"><span style="width:85%"></span></div><small>85%</small></article>
-      <article class="skill-card"><div class="skill-top"><span>05</span><i>RV</i></div><h3>React & Vite</h3><p>Pengembangan antarmuka berbasis component.</p><div class="skill-line"><span style="width:80%"></span></div><small>80%</small></article>
-      <article class="skill-card"><div class="skill-top"><span>06</span><i>NE</i></div><h3>Node.js & Express</h3><p>Backend, routing, autentikasi, dan REST API.</p><div class="skill-line"><span style="width:75%"></span></div><small>75%</small></article>
-      <article class="skill-card"><div class="skill-top"><span>07</span><i>SQL</i></div><h3>MySQL</h3><p>Database, tabel, relasi, dan pengelolaan data.</p><div class="skill-line"><span style="width:80%"></span></div><small>80%</small></article>
-      <article class="skill-card"><div class="skill-top"><span>08</span><i>GIT</i></div><h3>Git & GitHub</h3><p>Version control dan publikasi project online.</p><div class="skill-line"><span style="width:85%"></span></div><small>85%</small></article>
-    </div>
-  </section>
+    <section class="section light" id="skills">
+      <div class="section-head reveal">
+        <span class="section-no">04</span>
+        <div><p class="eyebrow">KEAHLIAN</p><h2>Skill yang <span>saya kembangkan.</span></h2></div>
+      </div>
+      <div class="skill-grid">
+        <article class="skill-card reveal"><span>01</span><h3>HTML</h3><p>Struktur halaman web yang rapi dan semantik.</p><b>Dasar — Menengah</b></article>
+        <article class="skill-card reveal"><span>02</span><h3>CSS</h3><p>Layout, responsive design, dan tampilan antarmuka.</p><b>Dasar — Menengah</b></article>
+        <article class="skill-card reveal"><span>03</span><h3>JavaScript</h3><p>Interaksi, logika, dan fitur website dinamis.</p><b>Dasar — Menengah</b></article>
+        <article class="skill-card reveal"><span>04</span><h3>Bootstrap</h3><p>Komponen dan layout website yang responsif.</p><b>Dasar — Menengah</b></article>
+        <article class="skill-card reveal"><span>05</span><h3>React & Vite</h3><p>Pengembangan antarmuka berbasis component.</p><b>Dasar — Menengah</b></article>
+        <article class="skill-card reveal"><span>06</span><h3>Node.js & Express</h3><p>Backend, routing, autentikasi, dan REST API.</p><b>Dasar</b></article>
+        <article class="skill-card reveal"><span>07</span><h3>MySQL & PostgreSQL</h3><p>Database, tabel, relasi, query, dan pengelolaan data.</p><b>Dasar — Menengah</b></article>
+        <article class="skill-card reveal"><span>08</span><h3>Git & GitHub</h3><p>Version control dan publikasi project secara online.</p><b>Dasar — Menengah</b></article>
+      </div>
+    </section>
 
-  <section class="dark-section" id="projects">
-    <div class="section-heading">
-      <p class="eyebrow">05 — PORTOFOLIO</p>
-      <h2>Beberapa <span>karya saya.</span></h2>
-      <p>Project latihan dan pengembangan yang pernah saya kerjakan.</p>
-    </div>
-    <div class="project-grid">
-      <article class="project-card"><div class="project-number">01</div><h3>Personal Portfolio</h3><p>Website profil pribadi untuk menampilkan informasi, keahlian, project, artikel, dan kontak.</p><div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div></article>
-      <article class="project-card featured-project"><div class="project-number">02</div><h3>Warung DPLOSOKK</h3><p>Website toko online dengan katalog produk dan pengelolaan data menggunakan teknologi web modern.</p><div class="tags"><span>React</span><span>Vite</span><span>Node.js</span><span>MySQL</span></div></article>
-      <article class="project-card"><div class="project-number">03</div><h3>Sistem Inventaris</h3><p>Aplikasi pengelolaan barang dengan fitur data, kategori, stok, login, dan REST API.</p><div class="tags"><span>React</span><span>Express</span><span>API</span><span>PostgreSQL</span></div></article>
-    </div>
-  </section>
+    <section class="section dark" id="projects">
+      <div class="section-head reveal">
+        <span class="section-no">05</span>
+        <div><p class="eyebrow">KARYA / PORTOFOLIO</p><h2>Beberapa <span>project saya.</span></h2></div>
+      </div>
+      <div class="project-grid">
+        <article class="project-card reveal"><div class="project-top"><span>01</span><small>WEB</small></div><h3>Personal Portfolio</h3><p>Website profil pribadi untuk menampilkan informasi, keahlian, project, artikel, dan kontak.</p><div class="tags"><i>HTML</i><i>CSS</i><i>JavaScript</i></div></article>
+        <article class="project-card featured reveal"><div class="project-top"><span>02</span><small>FULL STACK</small></div><h3>Warung DPLOSOKK</h3><p>Project toko online dengan katalog produk, area pembeli, panel admin, dan pengelolaan data.</p><div class="tags"><i>React</i><i>Vite</i><i>Node.js</i><i>MySQL</i></div></article>
+        <article class="project-card reveal"><div class="project-top"><span>03</span><small>APPLICATION</small></div><h3>Sistem Inventaris</h3><p>Aplikasi pengelolaan barang dengan data kategori, stok, login, dan REST API.</p><div class="tags"><i>React</i><i>Express</i><i>PostgreSQL</i></div></article>
+      </div>
+    </section>
 
-  <section class="light-section" id="certificates">
-    <div class="section-heading">
-      <p class="eyebrow">06 — SERTIFIKAT & PRESTASI</p>
-      <h2>Dokumentasi <span>pencapaian.</span></h2>
-      <p>Tempat untuk menampilkan sertifikat, pelatihan, penghargaan, dan bukti kompetensi.</p>
-    </div>
-    <div class="document-grid">
-      <article class="document-card"><span>01</span><h3>Sertifikat Kompetensi</h3><p>Dokumentasi sertifikat kompetensi yang relevan dengan bidang Rekayasa Perangkat Lunak.</p><div class="document-label">SERTIFIKAT</div></article>
-      <article class="document-card"><span>02</span><h3>Pelatihan & Workshop</h3><p>Dokumentasi kegiatan pelatihan, workshop, seminar, atau pembelajaran teknologi.</p><div class="document-label">PELATIHAN</div></article>
-      <article class="document-card"><span>03</span><h3>Prestasi & Penghargaan</h3><p>Ruang untuk menampilkan pencapaian dan penghargaan yang diperoleh selama proses belajar.</p><div class="document-label">PRESTASI</div></article>
-    </div>
-  </section>
+    <section class="section light" id="certificates">
+      <div class="section-head reveal">
+        <span class="section-no">06</span>
+        <div><p class="eyebrow">SERTIFIKAT / PRESTASI</p><h2>Dokumentasi <span>pencapaian.</span></h2></div>
+      </div>
+      <div class="document-grid">
+        <article class="document-card reveal"><span>01</span><p class="mini-label">SERTIFIKAT</p><h3>Sertifikat Kompetensi</h3><p>Tempat untuk menampilkan sertifikat kompetensi yang berkaitan dengan bidang RPL.</p></article>
+        <article class="document-card reveal"><span>02</span><p class="mini-label">PELATIHAN</p><h3>Pelatihan & Workshop</h3><p>Tempat untuk menampilkan sertifikat pelatihan, workshop, seminar, atau kegiatan pembelajaran.</p></article>
+        <article class="document-card reveal"><span>03</span><p class="mini-label">PRESTASI</p><h3>Prestasi & Penghargaan</h3><p>Tempat untuk menampilkan pencapaian dan penghargaan selama proses belajar.</p></article>
+      </div>
+    </section>
 
-  <section class="dark-section gallery-section" id="activities">
-    <div class="section-heading">
-      <p class="eyebrow">07 — KEGIATAN</p>
-      <h2>Dokumentasi <span>kegiatan.</span></h2>
-      <p>Galeri kegiatan sekolah, praktik, pembelajaran, workshop, dan proses pengerjaan project.</p>
-    </div>
-    <div class="activity-grid">
-      <article class="activity-card activity-large"><div><span>01</span><h3>Belajar & Praktik Coding</h3><p>Proses belajar dan mengembangkan kemampuan pemrograman.</p></div></article>
-      <article class="activity-card"><div><span>02</span><h3>Project Development</h3><p>Mengerjakan dan menguji project website.</p></div></article>
-      <article class="activity-card"><div><span>03</span><h3>Kegiatan Sekolah</h3><p>Dokumentasi kegiatan pembelajaran dan pengembangan diri.</p></div></article>
-      <article class="activity-card"><div><span>04</span><h3>Workshop & Seminar</h3><p>Ruang dokumentasi kegiatan teknologi.</p></div></article>
-    </div>
-  </section>
+    <section class="section dark" id="activities">
+      <div class="section-head reveal">
+        <span class="section-no">07</span>
+        <div><p class="eyebrow">KEGIATAN</p><h2>Dokumentasi <span>kegiatan.</span></h2></div>
+      </div>
+      <div class="activity-grid">
+        <article class="activity-card activity-main reveal"><span>01</span><div><p class="mini-label">PEMBELAJARAN</p><h3>Belajar & Praktik Coding</h3><p>Dokumentasi proses belajar pemrograman dan pengembangan website.</p></div></article>
+        <article class="activity-card reveal"><span>02</span><div><p class="mini-label">PROJECT</p><h3>Project Development</h3><p>Proses mengerjakan dan menguji project website.</p></div></article>
+        <article class="activity-card reveal"><span>03</span><div><p class="mini-label">SEKOLAH</p><h3>Kegiatan Pembelajaran</h3><p>Dokumentasi kegiatan sekolah dan pengembangan diri.</p></div></article>
+        <article class="activity-card reveal"><span>04</span><div><p class="mini-label">WORKSHOP</p><h3>Seminar & Workshop</h3><p>Dokumentasi kegiatan belajar dan eksplorasi teknologi.</p></div></article>
+      </div>
+    </section>
 
-  <section class="light-section" id="articles">
-    <div class="section-heading">
-      <p class="eyebrow">08 — ARTIKEL / BLOG</p>
-      <h2>Catatan <span>perjalanan belajar.</span></h2>
-      <p>Berbagi catatan, tutorial singkat, dan pengalaman selama mempelajari dunia teknologi.</p>
-    </div>
-    <div class="article-grid">
-      <article class="article-card"><span>01 / HTML</span><h3>Belajar HTML untuk Pemula</h3><p>Mengenal struktur dasar HTML dan cara menyusun halaman web dengan rapi.</p><a href="#contact">Baca selengkapnya</a></article>
-      <article class="article-card"><span>02 / CSS</span><h3>Membuat Website Responsive</h3><p>Mengenal konsep layout dan teknik dasar agar website nyaman digunakan di berbagai perangkat.</p><a href="#contact">Baca selengkapnya</a></article>
-      <article class="article-card"><span>03 / PROJECT</span><h3>Pengalaman Membuat Website</h3><p>Catatan proses belajar dari menentukan ide, membuat tampilan, coding, sampai mempublikasikan project.</p><a href="#contact">Baca selengkapnya</a></article>
-    </div>
-  </section>
+    <section class="section light" id="articles">
+      <div class="section-head reveal">
+        <span class="section-no">08</span>
+        <div><p class="eyebrow">ARTIKEL / BLOG</p><h2>Catatan <span>perjalanan belajar.</span></h2></div>
+      </div>
+      <div class="article-grid">
+        <article class="article-card reveal"><span>01 / HTML</span><h3>Belajar HTML untuk Pemula</h3><p>Mengenal struktur dasar HTML dan cara menyusun halaman web dengan rapi.</p></article>
+        <article class="article-card reveal"><span>02 / CSS</span><h3>Membuat Website Responsive</h3><p>Mengenal layout dan teknik dasar agar website nyaman digunakan di berbagai perangkat.</p></article>
+        <article class="article-card reveal"><span>03 / PROJECT</span><h3>Pengalaman Membuat Website</h3><p>Catatan proses belajar dari ide, desain, coding, pengujian, sampai publikasi project.</p></article>
+      </div>
+    </section>
 
-  <section class="contact" id="contact">
-    <div>
-      <p class="eyebrow">09 — KONTAK</p>
-      <h2>Yuk, <span>terhubung.</span></h2>
-      <p class="lead">Jika ingin berdiskusi, bekerja sama, atau sekadar menyapa, silakan hubungi saya melalui kontak berikut.</p>
-    </div>
-    <div class="contact-list">
-      <a href="mailto:muhammadilyasar2209@gmail.com"><small>Email</small><strong>muhammadilyasar2209@gmail.com</strong></a>
-      <a href="https://github.com/muhammadilyasa22-pro" target="_blank" rel="noopener"><small>GitHub</small><strong>muhammadilyasa22-pro</strong></a>
-      <a href="https://instagram.com/ily1ae" target="_blank" rel="noopener"><small>Instagram</small><strong>@ily1ae</strong></a>
-    </div>
-  </section>
-</main>
+    <section class="contact" id="contact">
+      <div class="contact-inner reveal">
+        <p class="eyebrow">09 — KONTAK</p>
+        <h2>Yuk, <span>terhubung.</span></h2>
+        <p class="lead">Terima kasih sudah melihat Fotofolio saya. Kamu dapat menghubungi saya melalui kontak dan media sosial yang tersedia.</p>
+        <div class="contact-grid">
+          <a href="mailto:emailkamu@example.com"><small>EMAIL</small><strong>emailkamu@example.com</strong></a>
+          <a href="https://github.com/muhammadilyasa22-pro" target="_blank" rel="noopener"><small>GITHUB</small><strong>github.com/muhammadilyasa22-pro</strong></a>
+          <a href="#home"><small>INSTAGRAM</small><strong>@usernamekamu</strong></a>
+        </div>
+      </div>
+    </section>
+  </main>
 
-<footer>
-  <div><span>© 2026</span> Muhammad Ilyasa Ramadhan</div>
-  <div class="footer-links"><a href="#home">Home</a><a href="#projects">Project</a><a href="#articles">Artikel</a><a href="#contact">Kontak</a></div>
-  <b>FOTO<span>FOLIO</span></b>
-</footer>
-<script src="script.js"></script>
+  <footer>
+    <div><a class="logo" href="#home">FOTO<span>FOLIO</span></a><p>Personal portfolio untuk mendokumentasikan perjalanan belajar dan karya.</p></div>
+    <div class="footer-links"><a href="#home">Home</a><a href="#projects">Project</a><a href="#articles">Artikel</a><a href="#contact">Kontak</a></div>
+    <p class="copyright">© 2026 Ilyasa. All Rights Reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
