@@ -28,6 +28,42 @@ styles.forEach(([href]) => {
   }
 });
 
+/* Perbaikan otomatis path gambar lama -> nama file yang sekarang ada di assets. */
+const imagePathMap = {
+  '36950281-34a2-4402-a3cf-74442dab660e(1).jpg': 'Belajar & Praktik Coding.jpeg',
+  'e25db1a7-c936-45a2-92cd-e82b874449d9(1).jpg': 'Project Development.jpeg',
+  '465c2eff-a99b-48f2-ada5-b3c81d049f3a.jpg': 'Kegiatan Gamelab Indonesia.jpeg',
+  '17f2fe92-ec1d-4a25-a232-8be717c634ce.jpg': 'Presentasi Project.jpeg',
+  'a46dcb01-a2a8-4da8-ad86-a3c2bad32054(1).jpg': 'Pembelajaran & Workshop.jpeg',
+  '67504a84-ca10-4b77-88f7-6b70d3e3e9b2(1).jpg': 'Presentasi Project.jpeg'
+};
+
+const fixAssetPath = (value) => {
+  if (!value) return value;
+  const clean = decodeURIComponent(value.split('?')[0].split('#')[0]);
+  const filename = clean.split('/').pop();
+  const replacement = imagePathMap[filename];
+  return replacement ? `assets/${encodeURIComponent(replacement)}` : value;
+};
+
+/* Ubah referensi lama yang masih tertinggal di HTML sebelum dipakai pengguna. */
+document.querySelectorAll('img[src], a[href]').forEach((element) => {
+  const attribute = element.tagName === 'IMG' ? 'src' : 'href';
+  const value = element.getAttribute(attribute);
+  const fixed = fixAssetPath(value);
+  if (fixed !== value) element.setAttribute(attribute, fixed);
+});
+
+/* Jika ada gambar lama yang muncul dari cache/HTML lain, otomatis diganti saat gagal. */
+document.querySelectorAll('img').forEach((image) => {
+  image.addEventListener('error', () => {
+    const fixed = fixAssetPath(image.getAttribute('src'));
+    if (fixed && fixed !== image.getAttribute('src')) {
+      image.setAttribute('src', fixed);
+    }
+  });
+});
+
 const profileSection = document.getElementById('profile');
 if (profileSection) {
   profileSection.classList.add('biodata-section');
@@ -75,7 +111,7 @@ if (educationSection) {
   educationSection.innerHTML = `<div class="section-head reveal"><span class="section-no">02</span><div><p class="eyebrow">PENDIDIKAN</p><h2>Perjalanan <span>pendidikan.</span></h2></div></div><div class="education-journey"><article class="education-step reveal"><div class="education-step-year">TK</div><div class="education-step-content"><p class="mini-label">PENDIDIKAN DASAR</p><h3>Bustanul Athfal Aisyiyah Wonoasri</h3><p>Pendidikan taman kanak-kanak.</p></div></article><article class="education-step reveal"><div class="education-step-year">MI</div><div class="education-step-content"><p class="mini-label">MADRASAH IBTIDAIYAH</p><h3>MI Muhammadiyah 5 Wonoasri</h3><p>Pendidikan dasar madrasah ibtidaiyah.</p></div></article><article class="education-step reveal"><div class="education-step-year">MTs</div><div class="education-step-content"><p class="mini-label">MADRASAH TSANAWIYAH</p><h3>MTs Muhammadiyah 2 Jenangan</h3><p>Pendidikan menengah pertama.</p></div></article><article class="education-step reveal"><div class="education-step-year">SMK</div><div class="education-step-content"><p class="mini-label">SEKOLAH MENENGAH KEJURUAN</p><h3>SMK Negeri 1 Jenangan</h3><p class="role">Rekayasa Perangkat Lunak (RPL)</p><p>Mempelajari pemrograman, pengembangan website, basis data, desain antarmuka, serta pembuatan project aplikasi.</p></div></article></div>`;
 }
 
-const activityImages=['assets/Belajar & Praktik Coding.jpeg','assets/Project Development.jpeg','assets/Kegiatan Gamelab Indonesia.jpeg','assets/Pembelajaran & Workshop.jpeg','assets/Presentasi Project.jpeg'];
+const activityImages=['assets/Belajar%20%26%20Praktik%20Coding.jpeg','assets/Project%20Development.jpeg','assets/Kegiatan%20Gamelab%20Indonesia.jpeg','assets/Pembelajaran%20%26%20Workshop.jpeg','assets/Presentasi%20Project.jpeg'];
 document.querySelectorAll('.activity-photo-card').forEach((card,index)=>{const src=activityImages[index];if(!src){card.style.display='none';return;}const image=card.querySelector('.activity-photo');const links=card.querySelectorAll('.activity-photo-btn');if(image)image.src=src;if(links[0])links[0].href=src;if(links[1])links[1].href=src;});
 
 document.querySelectorAll('.activity-photo-btn[download]').forEach((button) => button.remove());
@@ -115,24 +151,17 @@ if (contactSection) {
     </div>`;
 }
 
-// Hapus blok kontak lama di footer yang berisi emailkamu@example.com atau link kontak duplikat.
+// Hapus hanya blok kontak lama yang memang mengandung alamat contoh atau link kontak duplikat.
 const footer = document.querySelector('footer');
 if (footer) {
   footer.querySelectorAll('a, p, div, span').forEach((element) => {
     const text = element.textContent.trim();
-    if (text.includes('emailkamu@example.com') || text === 'EMAIL' || text === 'INSTAGRAM' || text === '@ily1ae') {
-      if (element.closest('.footer-contact-wrap')) return;
-      const parent = element.parentElement;
-      if (parent && parent !== footer && parent.textContent.trim() === text) parent.remove();
+    if (text.includes('emailkamu@example.com') || text.includes('muhammadilyasar2209@gmailcom.com')) {
+      const wrapper = element.closest('.footer-contact-wrap');
+      if (wrapper) wrapper.remove();
       else element.remove();
     }
   });
-  footer.querySelectorAll('a[href*="mailto:"]').forEach((link) => {
-    if (link.textContent.includes('emailkamu@example.com')) link.remove();
-  });
-  footer.querySelectorAll('a[href*="muhammadilyasar2209gmail.com"]').forEach((link) => link.remove());
-  const oldContact = footer.querySelector('.footer-contact-wrap');
-  if (oldContact) oldContact.remove();
 }
 
 const sections=document.querySelectorAll('section[id]');const links=document.querySelectorAll('nav a');
