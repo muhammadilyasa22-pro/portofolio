@@ -17,7 +17,7 @@ if (menu && nav) {
 
 const styles = [
   ['biodata.css'], ['reference.css'], ['desktop.css'],
-  ['education-modern.css'], ['about.css'], ['vision.css'], ['blog.css']
+  ['education-modern.css'], ['about.css'], ['vision.css'], ['blog.css'], ['certificates.css']
 ];
 styles.forEach(([href]) => {
   if (!document.querySelector(`link[href="${href}"]`)) {
@@ -77,6 +77,24 @@ if (educationSection) {
 
 const activityImages=['assets/Belajar & Praktik Coding.jpeg','assets/Project Development.jpeg','assets/Kegiatan Gamelab Indonesia.jpeg','assets/Pembelajaran & Workshop.jpeg','assets/Presentasi Project.jpeg'];
 document.querySelectorAll('.activity-photo-card').forEach((card,index)=>{const src=activityImages[index];if(!src){card.style.display='none';return;}const image=card.querySelector('.activity-photo');const links=card.querySelectorAll('.activity-photo-btn');if(image)image.src=src;if(links[0])links[0].href=src;if(links[1])links[1].href=src;});
+
+const certificateSection = document.getElementById('certificates');
+if (certificateSection) {
+  const card = certificateSection.querySelector('.document-card');
+  if (card && !card.querySelector('.certificate-preview')) {
+    const description = card.querySelector('p:last-child');
+    if (description) description.style.display = 'none';
+
+    const preview = document.createElement('a');
+    preview.href = 'assets/sertifikat%20kunjungan%20industri.jpeg';
+    preview.target = '_blank';
+    preview.rel = 'noopener noreferrer';
+    preview.className = 'certificate-preview';
+    preview.setAttribute('aria-label', 'Buka Sertifikat Kompetensi');
+    preview.innerHTML = '<img src="assets/sertifikat%20kunjungan%20industri.jpeg" alt="Sertifikat Kompetensi" loading="lazy"><span class="certificate-preview-label">Klik untuk membuka</span>';
+    card.appendChild(preview);
+  }
+}
 
 const sections=document.querySelectorAll('section[id]');const links=document.querySelectorAll('nav a');
 function setActiveNav(){let current='home';const position=window.scrollY+180;sections.forEach(section=>{if(position>=section.offsetTop)current=section.id;});links.forEach(link=>link.classList.toggle('active',link.getAttribute('href')===`#${current}`));}
