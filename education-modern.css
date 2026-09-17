@@ -1,0 +1,85 @@
+/* Modern, larger education journey */
+.education-journey{
+  max-width:920px;
+  margin:0 auto;
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:18px;
+  position:relative;
+}
+.education-journey::before{
+  content:'';
+  position:absolute;
+  left:50%;
+  top:30px;
+  bottom:30px;
+  width:2px;
+  background:linear-gradient(to bottom,transparent,var(--accent),var(--line),transparent);
+  transform:translateX(-50%);
+}
+.education-step{
+  position:relative;
+  min-height:205px;
+  padding:26px 25px 25px 92px;
+  background:rgba(255,255,255,.96);
+  border:1px solid var(--line);
+  border-radius:16px;
+  box-shadow:0 14px 35px rgba(55,40,30,.07);
+  transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease;
+  overflow:hidden;
+}
+.education-step:nth-child(odd){margin-right:9px}
+.education-step:nth-child(even){margin-left:9px}
+.education-step::after{
+  content:'';
+  position:absolute;
+  width:11px;
+  height:11px;
+  top:40px;
+  border-radius:50%;
+  background:var(--accent);
+  border:4px solid var(--accent-soft);
+  box-shadow:0 0 0 2px rgba(185,116,86,.18);
+  z-index:2;
+}
+.education-step:nth-child(odd)::after{right:-24px}
+.education-step:nth-child(even)::after{left:-24px}
+.education-step:hover{
+  transform:translateY(-7px);
+  box-shadow:0 20px 45px rgba(55,40,30,.11);
+  border-color:#d8c4b6;
+}
+.education-step-year{
+  position:absolute;
+  left:24px;
+  top:26px;
+  width:50px;
+  height:50px;
+  display:grid;
+  place-items:center;
+  border-radius:14px;
+  background:linear-gradient(135deg,var(--accent-soft),#fff7f1);
+  color:var(--accent);
+  font:700 12px 'Space Grotesk',sans-serif;
+  border:1px solid #ead3c4;
+}
+.education-step-content .mini-label{font-size:6px;letter-spacing:1.1px;color:var(--accent);font-weight:700}
+.education-step-content h3{font:700 13px/1.35 'Space Grotesk',sans-serif;color:var(--text);margin:9px 0 6px;letter-spacing:-.2px}
+.education-step-content p{font-size:7px;line-height:1.8;color:var(--muted);margin:0}
+.education-step-content .role{font-size:7px;color:var(--accent);font-weight:700;margin-bottom:4px}
+
+@media(max-width:850px){
+  .education-journey{grid-template-columns:1fr;max-width:620px;gap:13px}
+  .education-journey::before{left:25px;top:25px;bottom:25px}
+  .education-step,.education-step:nth-child(odd),.education-step:nth-child(even){margin:0;padding:23px 22px 23px 90px;min-height:175px}
+  .education-step::after,.education-step:nth-child(odd)::after,.education-step:nth-child(even)::after{left:19px;right:auto;top:39px}
+}
+@media(max-width:560px){
+  .education-journey{max-width:340px}
+  .education-journey::before{left:21px}
+  .education-step,.education-step:nth-child(odd),.education-step:nth-child(even){padding:20px 17px 20px 68px;min-height:160px;border-radius:13px}
+  .education-step-year{left:14px;top:20px;width:43px;height:43px;border-radius:11px;font-size:10px}
+  .education-step::after,.education-step:nth-child(odd)::after,.education-step:nth-child(even)::after{left:15px;top:34px;width:9px;height:9px;border-width:3px}
+  .education-step-content h3{font-size:10px}
+  .education-step-content p,.education-step-content .role{font-size:6.2px}
+}
