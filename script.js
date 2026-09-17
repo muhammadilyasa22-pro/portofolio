@@ -74,22 +74,27 @@ if (profileSection) {
   `;
 }
 
-/* Foto kegiatan yang sekarang ada di folder assets */
+/* Foto kegiatan sesuai file yang sekarang tersedia di assets */
 const activityImages = [
   'assets/Belajar & Praktik Coding.jpeg',
   'assets/Project Development.jpeg',
   'assets/Kegiatan Gamelab Indonesia.jpeg',
   'assets/Pembelajaran & Workshop.jpeg',
-  'assets/Presentasi Project.jpeg',
-  'assets/Kegiatan Presentasi.jpeg'
+  'assets/Presentasi Project.jpeg'
 ];
 
 const activityCards = document.querySelectorAll('.activity-photo-card');
 activityCards.forEach((card, index) => {
+  const src = activityImages[index];
+
+  if (!src) {
+    card.style.display = 'none';
+    return;
+  }
+
   const image = card.querySelector('.activity-photo');
   const links = card.querySelectorAll('.activity-photo-btn');
-  const src = activityImages[index];
-  if (!src) return;
+
   if (image) image.src = src;
   if (links[0]) links[0].href = src;
   if (links[1]) links[1].href = src;
@@ -101,9 +106,11 @@ const links = document.querySelectorAll('nav a');
 function setActiveNav() {
   let current = 'home';
   const position = window.scrollY + 180;
+
   sections.forEach((section) => {
     if (position >= section.offsetTop) current = section.id;
   });
+
   links.forEach((link) => {
     link.classList.toggle('active', link.getAttribute('href') === `#${current}`);
   });
