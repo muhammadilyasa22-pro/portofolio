@@ -36,6 +36,13 @@ if (!document.querySelector('link[href="desktop.css"]')) {
   document.head.appendChild(desktopStyle);
 }
 
+if (!document.querySelector('link[href="education-modern.css"]')) {
+  const educationStyle = document.createElement('link');
+  educationStyle.rel = 'stylesheet';
+  educationStyle.href = 'education-modern.css';
+  document.head.appendChild(educationStyle);
+}
+
 const profileSection = document.getElementById('profile');
 
 if (profileSection) {
@@ -74,7 +81,6 @@ if (profileSection) {
   `;
 }
 
-/* Perjalanan pendidikan: TK, MI, MTs, dan SMK */
 const educationSection = document.getElementById('education');
 
 if (educationSection) {
@@ -124,7 +130,6 @@ if (educationSection) {
   `;
 }
 
-/* Foto kegiatan sesuai file yang sekarang tersedia di assets */
 const activityImages = [
   'assets/Belajar & Praktik Coding.jpeg',
   'assets/Project Development.jpeg',
@@ -136,15 +141,12 @@ const activityImages = [
 const activityCards = document.querySelectorAll('.activity-photo-card');
 activityCards.forEach((card, index) => {
   const src = activityImages[index];
-
   if (!src) {
     card.style.display = 'none';
     return;
   }
-
   const image = card.querySelector('.activity-photo');
   const links = card.querySelectorAll('.activity-photo-btn');
-
   if (image) image.src = src;
   if (links[0]) links[0].href = src;
   if (links[1]) links[1].href = src;
@@ -156,11 +158,9 @@ const links = document.querySelectorAll('nav a');
 function setActiveNav() {
   let current = 'home';
   const position = window.scrollY + 180;
-
   sections.forEach((section) => {
     if (position >= section.offsetTop) current = section.id;
   });
-
   links.forEach((link) => {
     link.classList.toggle('active', link.getAttribute('href') === `#${current}`);
   });
