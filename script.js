@@ -17,7 +17,7 @@ if (menu && nav) {
 
 const styles = [
   ['biodata.css'], ['reference.css'], ['desktop.css'],
-  ['education-modern.css'], ['about.css'], ['vision.css'], ['blog.css'], ['certificates.css']
+  ['education-modern.css'], ['about.css'], ['vision.css'], ['blog.css'], ['certificates.css'], ['contact.css']
 ];
 styles.forEach(([href]) => {
   if (!document.querySelector(`link[href="${href}"]`)) {
@@ -97,6 +97,24 @@ if (certificateSection) {
     preview.innerHTML = '<img src="assets/sertifikat%20kunjungan%20industri.jpeg" alt="Sertifikat Kompetensi" loading="lazy"><span class="certificate-preview-label">Klik untuk membuka</span>';
     card.appendChild(preview);
   }
+}
+
+const contactSection = document.getElementById('contact');
+if (contactSection) {
+  contactSection.innerHTML = `
+    <div class="section-head reveal"><span class="section-no">08</span><div><p class="eyebrow">KONTAK</p><h2>Hubungi <span>saya.</span></h2></div></div>
+    <div class="contact-section-custom">
+      <div class="contact-custom-card">
+        <div class="contact-custom-item reveal">
+          <div class="contact-custom-icon">IG</div>
+          <div><p>INSTAGRAM</p><a href="https://www.instagram.com/ily1ae/" target="_blank" rel="noopener noreferrer">@ily1ae</a></div>
+        </div>
+        <div class="contact-custom-item reveal">
+          <div class="contact-custom-icon">@</div>
+          <div><p>GMAIL</p><a href="mailto:muhammadilyasar2209@gmail.com">muhammadilyasar2209@gmail.com</a></div>
+        </div>
+      </div>
+    </div>`;
 }
 
 const sections=document.querySelectorAll('section[id]');const links=document.querySelectorAll('nav a');
