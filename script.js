@@ -117,6 +117,15 @@ if (contactSection) {
     </div>`;
 }
 
+// Pastikan Instagram dan Gmail di footer juga menjadi tautan aktif.
+const footer = document.querySelector('footer');
+if (footer) {
+  const footerText = footer.innerHTML;
+  footer.innerHTML = footerText
+    .replace(/@ily1ae/g, '<a class="footer-contact-link" href="https://www.instagram.com/ily1ae/" target="_blank" rel="noopener noreferrer">@ily1ae</a>')
+    .replace(/muhammadilyasar2209@gmail\.com/g, '<a class="footer-contact-link" href="mailto:muhammadilyasar2209@gmail.com">muhammadilyasar2209@gmail.com</a>');
+}
+
 const sections=document.querySelectorAll('section[id]');const links=document.querySelectorAll('nav a');
 function setActiveNav(){let current='home';const position=window.scrollY+180;sections.forEach(section=>{if(position>=section.offsetTop)current=section.id;});links.forEach(link=>link.classList.toggle('active',link.getAttribute('href')===`#${current}`));}
 window.addEventListener('scroll',setActiveNav,{passive:true});setActiveNav();
