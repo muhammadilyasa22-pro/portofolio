@@ -115,17 +115,24 @@ if (contactSection) {
     </div>`;
 }
 
-// Buat kontak Instagram dan Gmail tampil berdekatan di footer dan tetap bisa diklik.
+// Hapus blok kontak lama di footer yang berisi emailkamu@example.com atau link kontak duplikat.
 const footer = document.querySelector('footer');
-if (footer && !footer.querySelector('.footer-contact-wrap')) {
-  const footerContact = document.createElement('div');
-  footerContact.className = 'footer-contact-wrap';
-  footerContact.innerHTML = `
-    <span class="footer-contact-label">Instagram:</span>
-    <a class="footer-contact-link" href="https://www.instagram.com/ily1ae/" target="_blank" rel="noopener noreferrer">@ily1ae</a>
-    <span class="footer-contact-label">Gmail:</span>
-    <a class="footer-contact-link" href="mailto:muhammadilyasar2209@gmail.com">muhammadilyasar2209@gmail.com</a>`;
-  footer.appendChild(footerContact);
+if (footer) {
+  footer.querySelectorAll('a, p, div, span').forEach((element) => {
+    const text = element.textContent.trim();
+    if (text.includes('emailkamu@example.com') || text === 'EMAIL' || text === 'INSTAGRAM' || text === '@ily1ae') {
+      if (element.closest('.footer-contact-wrap')) return;
+      const parent = element.parentElement;
+      if (parent && parent !== footer && parent.textContent.trim() === text) parent.remove();
+      else element.remove();
+    }
+  });
+  footer.querySelectorAll('a[href*="mailto:"]').forEach((link) => {
+    if (link.textContent.includes('emailkamu@example.com')) link.remove();
+  });
+  footer.querySelectorAll('a[href*="muhammadilyasar2209gmail.com"]').forEach((link) => link.remove());
+  const oldContact = footer.querySelector('.footer-contact-wrap');
+  if (oldContact) oldContact.remove();
 }
 
 const sections=document.querySelectorAll('section[id]');const links=document.querySelectorAll('nav a');
