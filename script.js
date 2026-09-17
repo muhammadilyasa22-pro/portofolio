@@ -78,6 +78,9 @@ if (educationSection) {
 const activityImages=['assets/Belajar & Praktik Coding.jpeg','assets/Project Development.jpeg','assets/Kegiatan Gamelab Indonesia.jpeg','assets/Pembelajaran & Workshop.jpeg','assets/Presentasi Project.jpeg'];
 document.querySelectorAll('.activity-photo-card').forEach((card,index)=>{const src=activityImages[index];if(!src){card.style.display='none';return;}const image=card.querySelector('.activity-photo');const links=card.querySelectorAll('.activity-photo-btn');if(image)image.src=src;if(links[0])links[0].href=src;if(links[1])links[1].href=src;});
 
+// Hapus fitur unduh dari Dokumentasi Kegiatan tanpa mengubah tombol Lihat Foto.
+document.querySelectorAll('.activity-photo-btn[download]').forEach((button) => button.remove());
+
 const certificateSection = document.getElementById('certificates');
 if (certificateSection) {
   const card = certificateSection.querySelector('.document-card');
