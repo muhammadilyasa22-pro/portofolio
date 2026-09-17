@@ -15,12 +15,15 @@ if (menu && nav) {
   });
 }
 
-/* Desain biodata baru */
-const biodataStyle = document.createElement('link');
-biodataStyle.rel = 'stylesheet';
-biodataStyle.href = 'biodata.css';
-document.head.appendChild(biodataStyle);
+/* CSS biodata tambahan */
+if (!document.querySelector('link[href="biodata.css"]')) {
+  const biodataStyle = document.createElement('link');
+  biodataStyle.rel = 'stylesheet';
+  biodataStyle.href = 'biodata.css';
+  document.head.appendChild(biodataStyle);
+}
 
+/* Biodata pribadi */
 const profileSection = document.getElementById('profile');
 
 if (profileSection) {
@@ -31,7 +34,6 @@ if (profileSection) {
         <p class="eyebrow">01 — DATA PRIBADI</p>
         <h2>Biodata <span>Diri.</span></h2>
       </div>
-
       <div class="biodata-card reveal">
         <div class="biodata-photo">
           <img src="assets/profile.jpg" alt="Foto profil Muhammad Ilyasa Ramadhan">
@@ -40,7 +42,6 @@ if (profileSection) {
             <strong>MUHAMMAD ILYASA RAMADHAN</strong>
           </div>
         </div>
-
         <div class="biodata-content">
           <h3>Identitas Pribadi</h3>
           <dl class="biodata-list">
@@ -54,12 +55,35 @@ if (profileSection) {
             <div class="biodata-row"><dt>Agama</dt><span class="colon">:</span><dd>ISLAM</dd></div>
             <div class="biodata-row"><dt>Pekerjaan</dt><span class="colon">:</span><dd>PELAJAR/MAHASISWA</dd></div>
           </dl>
-          <p class="biodata-note">Data biodata ditampilkan sebagai bagian dari profil pribadi.</p>
+          <p class="biodata-note">Informasi profil pribadi Muhammad Ilyasa Ramadhan.</p>
         </div>
       </div>
     </div>
   `;
 }
+
+/* Perbaiki foto kegiatan agar memakai file yang benar-benar ada di repository */
+const activityImages = [
+  'assets/WhatsApp Image 2026-09-17 at 08.21.23 (1).jpeg',
+  'assets/WhatsApp Image 2026-09-17 at 08.21.23 (2).jpeg',
+  'assets/WhatsApp Image 2026-09-17 at 08.21.23 (3).jpeg',
+  'assets/WhatsApp Image 2026-09-17 at 08.21.23.jpeg',
+  'assets/WhatsApp Image 2026-09-17 at 08.21.24 (1).jpeg',
+  'assets/WhatsApp Image 2026-09-17 at 08.21.24 (2).jpeg'
+];
+
+const activityCards = document.querySelectorAll('.activity-photo-card');
+activityCards.forEach((card, index) => {
+  const image = card.querySelector('.activity-photo');
+  const links = card.querySelectorAll('.activity-photo-btn');
+  const src = activityImages[index];
+
+  if (!src) return;
+
+  if (image) image.src = src;
+  if (links[0]) links[0].href = src;
+  if (links[1]) links[1].href = src;
+});
 
 const sections = document.querySelectorAll('section[id]');
 const links = document.querySelectorAll('nav a');
@@ -80,6 +104,7 @@ function setActiveNav() {
 window.addEventListener('scroll', setActiveNav, { passive: true });
 setActiveNav();
 
+/* Animasi masuk untuk semua elemen, termasuk biodata yang dibuat oleh JavaScript */
 const revealItems = document.querySelectorAll('.reveal');
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
